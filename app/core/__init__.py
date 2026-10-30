@@ -1,0 +1,1 @@
+"""CLI-independent application logic."""

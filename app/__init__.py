@@ -1,0 +1,1 @@
+"""Research discovery application package."""

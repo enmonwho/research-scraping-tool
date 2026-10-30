@@ -1,0 +1,18 @@
+[
+  {
+    "provider": "OpenAlex",
+    "external_id": "https://openalex.org/W_COMBINED_1",
+    "doi": "https://doi.org/10.5555/combined",
+    "title": "Synthetic combined provider paper",
+    "authors": ["Ada Author"],
+    "source_url": "https://openalex.example/works/W_COMBINED_1"
+  },
+  {
+    "provider": "OpenAlex",
+    "external_id": "https://openalex.org/W_OPENALEX_ONLY",
+    "doi": "10.5555/openalex-only",
+    "title": "Synthetic OpenAlex only paper",
+    "authors": ["Ben Author"],
+    "source_url": "https://openalex.example/works/W_OPENALEX_ONLY"
+  }
+]

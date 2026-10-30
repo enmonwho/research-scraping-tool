@@ -1,0 +1,43 @@
+{
+  "results": [
+    {
+      "id": "https://openalex.org/W1234567890",
+      "doi": "https://doi.org/10.1234/example.paper",
+      "display_name": "Urban heat exposure and public health",
+      "publication_year": 2024,
+      "abstract_inverted_index": {
+        "Urban": [0],
+        "heat": [1],
+        "exposure": [2],
+        "affects": [3],
+        "health.": [4]
+      },
+      "authorships": [
+        {"author": {"display_name": "A. Researcher", "id": "https://openalex.org/A1"}},
+        {"author": {"display_name": "B. Scientist", "id": "https://openalex.org/A2"}}
+      ],
+      "keywords": [
+        {"display_name": "urban heat"},
+        {"display_name": "public health"}
+      ],
+      "primary_location": {
+        "landing_page_url": "https://publisher.example.org/articles/heat-health",
+        "pdf_url": null,
+        "source": {"display_name": "Journal of Example Research", "type": "journal"}
+      },
+      "best_oa_location": {
+        "landing_page_url": "https://repository.example.org/record/123",
+        "pdf_url": "https://repository.example.org/files/123.pdf",
+        "license": "cc-by",
+        "is_oa": true,
+        "source": {"display_name": "Example Repository", "type": "repository"}
+      },
+      "open_access": {
+        "is_oa": true,
+        "oa_status": "green",
+        "license": "cc-by",
+        "oa_url": "https://repository.example.org/record/123"
+      }
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "status": "ok",
+  "message-type": "work-list",
+  "message": {
+    "items": [
+      {
+        "DOI": "10.5555/Crossref.Example.2024",
+        "URL": "https://api.crossref.org/works/10.5555/Crossref.Example.2024",
+        "title": ["Flood prediction with community observations"],
+        "author": [
+          {"given": "Amina", "family": "Researcher", "ORCID": "https://orcid.org/0000-0000-0000-0001"},
+          {"given": "Ben", "family": "Scientist"}
+        ],
+        "abstract": "<jats:p>Reliable <jats:italic>flood</jats:italic> forecasts &amp; early warnings.</jats:p>",
+        "published-print": {"date-parts": [[2024, 5, 17]]},
+        "publisher": "Example University Press",
+        "type": "journal-article",
+        "container-title": ["Journal of Flood Research"],
+        "license": [
+          {"URL": "https://creativecommons.org/licenses/by/4.0/", "start": {"date-parts": [[2024, 1, 1]]}}
+        ],
+        "link": [
+          {"URL": "https://publisher.example/article/123", "content-type": "text/html", "intended-application": "text-mining"},
+          {"URL": "https://publisher.example/files/123.pdf", "content-type": "application/pdf", "content-version": "vor", "intended-application": "similarity-checking"}
+        ]
+      },
+      {
+        "DOI": "10.5555/crossref.example.incomplete",
+        "title": ["Incomplete publication date"],
+        "published-online": {"date-parts": [[2021]]},
+        "URL": "https://doi.org/10.5555/crossref.example.incomplete"
+      }
+    ],
+    "total-results": 2
+  }
+}

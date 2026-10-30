@@ -1,0 +1,118 @@
+{
+  "name": "Research Discovery - Search Papers",
+  "nodes": [
+    {
+      "parameters": {},
+      "id": "e2d9748f-e7fb-4c31-8c40-9942df7f0001",
+      "name": "When clicking ‘Test workflow’",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [240, 300]
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            { "id": "e2d9748f-e7fb-4c31-8c40-9942df7f0011", "name": "topic", "value": "urban heat islands", "type": "string" },
+            { "id": "e2d9748f-e7fb-4c31-8c40-9942df7f0012", "name": "provider", "value": "all", "type": "string" },
+            { "id": "e2d9748f-e7fb-4c31-8c40-9942df7f0013", "name": "limit", "value": 10, "type": "number" },
+            { "id": "e2d9748f-e7fb-4c31-8c40-9942df7f0014", "name": "expand", "value": false, "type": "boolean" }
+          ]
+        },
+        "options": {}
+      },
+      "id": "e2d9748f-e7fb-4c31-8c40-9942df7f0002",
+      "name": "Edit search settings",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [460, 300]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "http://127.0.0.1:8765/jobs",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpBearerAuth",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            { "name": "Content-Type", "value": "application/json" }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ { topic: $json.topic, provider: $json.provider, limit: $json.limit, expand: $json.expand } }}",
+        "options": { "timeout": 15000 }
+      },
+      "id": "e2d9748f-e7fb-4c31-8c40-9942df7f0003",
+      "name": "Submit Search",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [700, 300]
+    },
+    {
+      "parameters": { "amount": 2, "unit": "seconds" },
+      "id": "e2d9748f-e7fb-4c31-8c40-9942df7f0004",
+      "name": "Wait before checking",
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [920, 300]
+    },
+    {
+      "parameters": {
+        "url": "={{ 'http://127.0.0.1:8765' + $('Submit Search').first().json.status_url }}",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpBearerAuth",
+        "options": { "timeout": 15000 }
+      },
+      "id": "e2d9748f-e7fb-4c31-8c40-9942df7f0005",
+      "name": "Get Search Status",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [1140, 300]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": { "caseSensitive": true, "leftValue": "", "typeValidation": "strict", "version": 2 },
+          "conditions": [
+            { "id": "e2d9748f-e7fb-4c31-8c40-9942df7f0021", "leftValue": "={{ ['queued', 'running'].includes($json.status) && $runIndex < 29 }}", "rightValue": true, "operator": { "type": "boolean", "operation": "true", "singleValue": true } }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "e2d9748f-e7fb-4c31-8c40-9942df7f0006",
+      "name": "Still running?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [1360, 300]
+    },
+    {
+      "parameters": {},
+      "id": "e2d9748f-e7fb-4c31-8c40-9942df7f0007",
+      "name": "Search finished or polling limit reached",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [1580, 400]
+    }
+  ],
+  "connections": {
+    "When clicking ‘Test workflow’": { "main": [[{ "node": "Edit search settings", "type": "main", "index": 0 }]] },
+    "Edit search settings": { "main": [[{ "node": "Submit Search", "type": "main", "index": 0 }]] },
+    "Submit Search": { "main": [[{ "node": "Wait before checking", "type": "main", "index": 0 }]] },
+    "Wait before checking": { "main": [[{ "node": "Get Search Status", "type": "main", "index": 0 }]] },
+    "Get Search Status": { "main": [[{ "node": "Still running?", "type": "main", "index": 0 }]] },
+    "Still running?": {
+      "main": [
+        [{ "node": "Wait before checking", "type": "main", "index": 0 }],
+        [{ "node": "Search finished or polling limit reached", "type": "main", "index": 0 }]
+      ]
+    }
+  },
+  "active": false,
+  "settings": { "executionOrder": "v1" },
+  "versionId": "e2d9748f-e7fb-4c31-8c40-9942df7f0099",
+  "meta": { "templateCredsSetupCompleted": false },
+  "tags": []
+}

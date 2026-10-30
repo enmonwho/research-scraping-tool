@@ -1,0 +1,28 @@
+{
+  "status": "OK",
+  "data": {
+    "count": 2,
+    "items": [
+      {
+        "name": "Urban Flood Observations",
+        "type": "dataset",
+        "url": "https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/ABC123",
+        "global_id": "doi:10.7910/DVN/ABC123",
+        "description": "Observations of urban flooding across three cities.",
+        "published_at": "2024-06-12T12:00:00Z",
+        "authors": ["A. Researcher", "B. Scientist"],
+        "dataset_id": 321,
+        "entity_id": "doi:10.7910/DVN/ABC123",
+        "versionId": 7
+      },
+      {
+        "name": "Coastal Change Measurements",
+        "type": "dataset",
+        "url": "https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/XYZ987",
+        "global_id": "doi:10.7910/DVN/XYZ987",
+        "dataset_id": 654,
+        "versionId": 2
+      }
+    ]
+  }
+}

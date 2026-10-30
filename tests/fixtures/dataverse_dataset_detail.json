@@ -1,0 +1,30 @@
+{
+  "status": "OK",
+  "data": {
+    "id": 321,
+    "persistentId": "doi:10.7910/DVN/ABC123",
+    "latestVersion": {
+      "versionNumber": 7,
+      "releaseTime": "2024-06-12T12:00:00Z",
+      "license": {"name": "CC0 1.0", "uri": "https://creativecommons.org/publicdomain/zero/1.0/"},
+      "metadataBlocks": {
+        "citation": {
+          "fields": [
+            {"typeName": "title", "value": "Urban Flood Observations"},
+            {"typeName": "dsDescription", "value": [{"dsDescriptionValue": {"value": "Measurements collected during flood events."}}]},
+            {"typeName": "author", "value": [
+              {"authorName": {"value": "A. Researcher"}, "authorAffiliation": {"value": "Harvard University"}},
+              {"authorName": {"value": "B. Scientist"}}
+            ]},
+            {"typeName": "keyword", "value": [{"keywordValue": "flooding"}, {"keywordValue": "urban hydrology"}]},
+            {"typeName": "publicationDate", "value": "2024-06-12"}
+          ]
+        }
+      },
+      "files": [
+        {"label": "rainfall.csv", "restricted": false, "dataFile": {"id": 9001, "filename": "rainfall.csv", "contentType": "text/csv", "filesize": 128, "persistentId": "doi:10.70122/FK2/RAIN"}},
+        {"label": "elevation.tif", "restricted": true, "dataFile": {"id": 9002, "filename": "elevation.tif", "contentType": "image/tiff", "filesize": 4096}}
+      ]
+    }
+  }
+}

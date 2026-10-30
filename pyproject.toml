@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "research-discovery-cli"
+version = "0.1.0"
+description = "A local research discovery CLI"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.optional-dependencies]
+semantic = ["sentence-transformers>=6.1.0,<7"]
+desktop = ["PySide6-Essentials>=6.8.6,<7"]
+build = ["PySide6-Essentials>=6.8.6,<7", "PyInstaller>=6.15,<7"]
+
+[project.scripts]
+research-discovery = "app.cli.main:main"
+research-discovery-gui = "app.gui.main:main"
+
+[tool.setuptools.packages.find]
+include = ["app*"]

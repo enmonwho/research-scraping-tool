@@ -1,0 +1,21 @@
+{
+  "meta": {"count": 2},
+  "results": [
+    {
+      "id": "https://openalex.org/W1234567890",
+      "display_name": "Urban heat exposure and public health",
+      "publication_year": 2024,
+      "primary_location": {
+        "landing_page_url": "https://doi.org/10.5555/example.2024.1"
+      }
+    },
+    {
+      "id": "https://openalex.org/W0987654321",
+      "display_name": "A second study",
+      "publication_year": 2021,
+      "primary_location": {
+        "landing_page_url": "https://example.org/papers/second-study"
+      }
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "results": [
+    {
+      "id": "https://openalex.org/W9876543210",
+      "display_name": "Metadata is incomplete",
+      "publication_year": null,
+      "authorships": [],
+      "keywords": [],
+      "primary_location": {
+        "landing_page_url": null,
+        "pdf_url": null,
+        "source": null
+      },
+      "best_oa_location": null,
+      "open_access": {"is_oa": null, "license": null}
+    },
+    {
+      "display_name": null,
+      "publication_year": "not a year",
+      "authorships": [null, {"author": null}],
+      "keywords": [null, {}],
+      "primary_location": "unexpected shape",
+      "open_access": null
+    }
+  ]
+}

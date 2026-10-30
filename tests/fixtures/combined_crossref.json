@@ -1,0 +1,19 @@
+[
+  {
+    "provider": "Crossref",
+    "external_id": "https://api.crossref.org/works/10.5555/combined",
+    "doi": "10.5555/COMBINED",
+    "title": "Synthetic combined provider paper",
+    "authors": ["Casey Author"],
+    "source_url": "https://publisher.example/combined",
+    "download_url": "https://publisher.example/combined.pdf"
+  },
+  {
+    "provider": "Crossref",
+    "external_id": "https://api.crossref.org/works/10.5555/crossref-only",
+    "doi": "10.5555/crossref-only",
+    "title": "Synthetic Crossref only paper",
+    "authors": ["Dana Author"],
+    "source_url": "https://publisher.example/crossref-only"
+  }
+]

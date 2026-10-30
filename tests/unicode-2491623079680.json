@@ -1,0 +1,33 @@
+[
+  {
+    "resource_type": "paper",
+    "title": "Floods — études naïve 雪",
+    "description": null,
+    "authors": null,
+    "publication_year": 2025,
+    "source_provider": "OpenAlex",
+    "external_id": "W-unicode",
+    "doi": "10.5555/unicode",
+    "keywords": null,
+    "retrieved_at": "2025-01-01T00:00:00+00:00",
+    "license": null,
+    "is_open_access": null,
+    "links": [],
+    "downloadable_files": [],
+    "provenance": {
+      "source_provider": "OpenAlex",
+      "external_id": "W-unicode",
+      "retrieved_at": "2025-01-01T00:00:00+00:00",
+      "original_metadata": {},
+      "provider_observations": []
+    },
+    "original_metadata": {},
+    "search_metadata": {
+      "queries": [
+        "flood prediction",
+        "flood forecasting"
+      ],
+      "expansion_method": "deterministic-keywords-v1"
+    }
+  }
+]
